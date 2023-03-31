@@ -34,3 +34,7 @@ steps:
   env:
     SHIFTLEFT_ORG_ID: $(SHIFTLEFT_ORG_ID)
     SHIFTLEFT_ACCESS_TOKEN: $(SHIFTLEFT_ACCESS_TOKEN)
+- task: SynopsysDetectTask@8
+  inputs:
+    BlackDuckService: 'Partner BD HUB'
+    DetectVersion: 'latest'
