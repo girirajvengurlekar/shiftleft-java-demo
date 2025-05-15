@@ -38,6 +38,7 @@ public class DataBuilder {
       System.out.println(" File Write Successful ");
     } catch (IOException e) {
 
+      // Need to also log this error
       e.printStackTrace();
 
     }
