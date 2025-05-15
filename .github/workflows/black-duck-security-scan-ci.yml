@@ -30,25 +30,31 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
-      - name: Black Duck SCA scan
-        uses: blackduck-inc/black-duck-security-scan@805cbd09e806b01907bbea0f990723c2bb85abe9
+      - name: Black Duck Polaris scan
+        uses: blackduck-inc/black-duck-security-scan@v2.1.1
         with:
           ### ---------- BLACKDUCK SCA SCANNING: REQUIRED FIELDS ----------
-          blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
-          blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
+          # blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
+          # blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
 
           ### ---------- COVERITY SCANNING: REQUIRED FIELDS ----------
-          coverity_url: ${{ vars.COVERITY_URL }}
-          coverity_user: ${{ secrets.COVERITY_USER }}
-          coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
+          # coverity_url: ${{ vars.COVERITY_URL }}
+          # coverity_user: ${{ secrets.COVERITY_USER }}
+          # coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
 
           ### ---------- POLARIS SCANNING: REQUIRED FIELDS ----------
-          polaris_server_url: ${{ vars.POLARIS_SERVER_URL }}
+          polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }}
           polaris_assessment_types: "SCA,SAST"
+          polaris_application_name: "SAST & SCA Demo Experimental"
+          polaris_project_name: "Shift-Left_Java"
+          polaris_prComment_enabled: 'true'
+          polaris_reports_sarif_create: 'true'
+          polaris_upload_sarif_report: 'false'
 
           ### ---------- SRM SCANNING: REQUIRED FIELDS ----------
-          srm_url: ${{ vars.SRM_URL }}
-          srm_apikey: ${{ secrets.SRM_API_KEY }}
-          srm_assessment_types: "SCA,SAST"
+          # srm_url: ${{ vars.SRM_URL }}
+          # srm_apikey: ${{ secrets.SRM_API_KEY }}
+          # srm_assessment_types: "SCA,SAST"
 
