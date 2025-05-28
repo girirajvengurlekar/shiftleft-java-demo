@@ -39,6 +39,8 @@ public class DataBuilder {
     } catch (IOException e) {
 
       // Need to also log this error
+      // Handle BW.close in finally ?
+      
       e.printStackTrace();
 
     }
