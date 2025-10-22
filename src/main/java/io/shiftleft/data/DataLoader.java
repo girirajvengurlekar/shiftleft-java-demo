@@ -101,4 +101,5 @@ public class DataLoader implements CommandLineRunner {
     }
     log.debug("Test data loaded...");
   }
+    System.err.println("Maybe an error");
 }
