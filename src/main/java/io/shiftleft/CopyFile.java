@@ -43,12 +43,13 @@ public class CopyFile {
 		File[] listOfFiles = folder.listFiles();
         String filecontent = new String();
         for (File f : listOfFiles) {
-       		// Dummy
+       		// Dummy logic
             return;
           }
     }
 
 }
+
 
 
 
