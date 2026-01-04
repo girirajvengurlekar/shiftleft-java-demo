@@ -1,4 +1,4 @@
-package oata;
+package io.shiftleft;
 
 import java.io.*;
  
@@ -37,4 +37,5 @@ public class CopyFile {
             System.out.println("Exception occured");
         }
     }
+
 }
