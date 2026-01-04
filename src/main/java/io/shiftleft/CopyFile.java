@@ -1,6 +1,7 @@
 package io.shiftleft;
 
 import java.io.*;
+import org.springframework.core.io.ClassPathResource;
  
 /**
  * This program demonstrates how to copy a file using the
@@ -48,5 +49,6 @@ public class CopyFile {
     }
 
 }
+
 
 
