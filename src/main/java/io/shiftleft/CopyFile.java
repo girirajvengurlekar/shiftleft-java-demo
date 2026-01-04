@@ -37,11 +37,16 @@ public class CopyFile {
             System.out.println("Exception occured");
         }
 
-		  File file = new File("C:\myfile.txt");
-		  if(!file.exists()) {
-			file.getParentFile().mkdirs();
-		  }
+		ClassPathResource cpr = new ClassPathResource("static");
+    	File folder = new File(cpr.getPath());
+		File[] listOfFiles = folder.listFiles();
+        String filecontent = new String();
+        for (File f : listOfFiles) {
+       		// Dummy
+            return;
+          }
     }
 
 }
+
 
