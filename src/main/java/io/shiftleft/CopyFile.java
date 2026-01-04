@@ -36,6 +36,12 @@ public class CopyFile {
         } catch (IOException ex) {
             System.out.println("Exception occured");
         }
+
+		  File file = new File("C:\myfile.txt");
+		  if(!file.exists()) {
+			file.getParentFile().mkdirs();
+		  }
     }
 
 }
+
