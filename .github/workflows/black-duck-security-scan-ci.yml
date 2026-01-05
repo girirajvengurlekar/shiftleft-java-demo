@@ -51,7 +51,7 @@ jobs:
           polaris_project_name: "Shift-Left_Java"
           polaris_prComment_enabled: 'true'
           polaris_reports_sarif_create: 'true'
-          polaris_upload_sarif_report: 'false'
+          polaris_upload_sarif_report: 'true'
 
           ### ---------- SRM SCANNING: REQUIRED FIELDS ----------
           # srm_url: ${{ vars.SRM_URL }}
