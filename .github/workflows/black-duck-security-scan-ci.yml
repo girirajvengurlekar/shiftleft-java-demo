@@ -31,7 +31,7 @@ jobs:
           distribution: microsoft
           cache: maven
       - name: Black Duck Polaris scan
-        uses: blackduck-inc/black-duck-security-scan@v2.1.1
+        uses: blackduck-inc/black-duck-security-scan@v2
         with:
 
           ### ---------- POLARIS SCANNING: REQUIRED FIELDS ----------
